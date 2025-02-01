@@ -96,8 +96,6 @@
                     </tr>
                 @endforeach
             </tbody>            
-            
-            <!-- Pagination Links -->
             <tr>
                 <td colspan="10">
                     <div class="pagination-container">
@@ -205,8 +203,6 @@
                 $("#sortable tr").each(function () {
                     sortedIDs.push($(this).attr("data-id"));
                 });
-
-                // Send sorted IDs to the server via AJAX
                 $.ajax({
                     url: "{{ route('update.product.order') }}",
                     type: "POST",
